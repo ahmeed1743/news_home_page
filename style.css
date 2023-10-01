@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    --text-size : 15px;
+    --transition: 0.3s ease;
+}
+body{
+    font-family: "Inter" , sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    padding: 20px 80px;
+}
+@media ( max-width : 768px ) {
+    .container{
+        padding: 20px;
+    }
+    
+}
+
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 60px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+}
+.nav.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    height: 100vh;
+    background-color: white;
+    width: 70%;
+    align-items: flex-start;
+    padding: 20px;
+    border-left: 1px solid lightgray;
+    z-index: 100;
+}
+.nav li{
+    padding: 10px 14px;
+    margin-right: 5px;
+}
+.nav li a{
+    color: var(--Dark-grayish-blue);
+    font-size: var(--text-size);
+    transition: var(--transition);
+}
+.nav li a:hover{
+    color: var(--Soft-red);
+}
+.menu{
+    display: none;
+    cursor: pointer;
+}
+.close{
+    display: none;
+    width: 30px;
+    align-self: flex-end;
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+.close.active{
+    display: block;
+}
+@media ( max-width : 768px ) {
+    .nav{
+        display: none; 
+    }
+    .menu{
+        display: block;
+    }
+    
+}
+
+.landing .container{
+    display: flex;
+    justify-content: space-between;
+}
+.left-side {
+    width: 54%;
+}
+.left-side .main-img {
+    max-width: 100%;
+}
+.left-side .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left-side .content h1 {
+    font-weight: 800;
+    font-size: 36px;
+    margin-right: 24px;
+}
+.left-side .text p {
+    line-height: 1.8;
+    font-size: var(--text-size);
+    color: var(--Dark-grayish-blue);
+}
+.left-side .text a {
+    text-transform: uppercase;
+    background: var(--Soft-red);
+    padding: 12px;
+    display: block;
+    width: 160px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 13px;
+    transition: var(--transition);
+}
+.left-side .text a:hover{
+    background-color: hsl(5, 87%, 54%);
+    transform: scale(0.96);
+}
+.right-side{
+    width: 44%;
+    background-color: var(--Very-dark-blue);
+}
+.right-side .content{
+    color: white;
+    padding: 30px;
+}
+.right-side h3{
+    color: var(--Soft-orange);
+    text-transform: capitalize;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.right-side .item{
+    margin-top: 10px;
+    padding: 20px 0px;
+}
+.right-side .item:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+}
+
+.right-side .item h4{
+    color: var(--Off-white);
+    font-size: 19px;
+}
+.right-side .item p{
+    color: var(--Grayish-blue);
+    line-height: 1.8;
+    margin-top: 10px;
+    font-size: var(--text-size);
+}
+@media ( max-width : 768px ) {
+    .landing .container{
+        flex-direction: column;
+    }
+    .left-side ,
+    .right-side{
+        width: 100%;
+    }
+    .left-side .content{
+        flex-direction: column;
+        
+    }
+    
+}
+
+
+.list .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.box {
+    display: flex;
+    gap: 20px;
+}
+.img-box {
+    max-width: 100px;
+}
+.box .text  .number {
+    color: var(--Grayish-blue);
+    font-size: 32px;
+    font-weight: 800;
+}
+.box .text h3{
+    font-weight: 800;
+    color: var(--Very-dark-blue);
+    margin: 10px 0px;
+}
+.box .text p{
+    font-size: var(--text-size);
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6;
+}
+@media ( max-width : 768px) {
+    .list .container{
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+}
+
+
+
